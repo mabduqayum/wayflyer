@@ -1,0 +1,27 @@
+@import "src/styles/theme";
+
+$host-margin: 8px;
+header {
+  position: fixed;
+  top: 0;
+  margin: $host-margin;
+  padding: 16px;
+  height: 4rem;
+  width: calc(100% - 2 * #{$host-margin});
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 6%);
+  color: $secondary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.nav-items {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.info-items {
+  display: flex;
+  column-gap: 1rem;
+}
