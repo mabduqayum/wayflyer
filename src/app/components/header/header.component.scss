@@ -4,12 +4,15 @@ $host-margin: 8px;
 header {
   position: fixed;
   top: 0;
+  left: 0;
   margin: $host-margin;
   padding: 16px;
-  height: 4rem;
+  height: 5rem;
   width: calc(100% - 2 * #{$host-margin});
+  border-radius: 8px;
+  background-color: white;
   box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 6%);
-  color: $secondary-color;
+  color: $text-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,10 +21,9 @@ header {
 
 .nav-items {
   display: flex;
-  column-gap: 1rem;
 }
 
 .info-items {
   display: flex;
-  column-gap: 1rem;
+  column-gap: 4px;
 }

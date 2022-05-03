@@ -4,13 +4,23 @@
   </figure>
 
   <nav class="nav-items">
-    <div class="nav-item">Funding</div>
-    <div class="menu-item">Our customers</div>
-    <div class="menu-item">Company</div>
+    <button mat-button class="nav-item">
+      Funding
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <button mat-button class="menu-item">
+      Our customers
+    </button>
+    <button mat-button class="menu-item">
+      Company
+      <mat-icon>expand_more</mat-icon>
+    </button>
   </nav>
 
   <div class="info-items">
-    <div class="info-item">Log In</div>
-    <div class="info-item">Get funded</div>
+    <button mat-button class="info-item">Log In</button>
+    <button mat-flat-button
+            color="primary"
+            class="info-item">Get funded</button>
   </div>
 </header>
