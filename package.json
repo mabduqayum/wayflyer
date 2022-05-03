@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port=7778 --open",
-    "start-host": "ng serve --port=7778 --open --host=192.168.1.187",
-    "build": "ng build --configuration=production --outputPath=docs --base-href=https://mabduqayum.github.io/wayflyer/",
+    "start": "ng serve --port=7294 --open",
+    "start-host": "ng serve --port=7294 --open --host=192.168.1.13",
+    "build": "ng build --configuration=production",
+    "gh-build": "ng build --configuration=production --outputPath=docs --base-href=https://mabduqayum.github.io/wayflyer/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
