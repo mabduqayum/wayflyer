@@ -3,8 +3,8 @@
 $host-margin: 8px;
 header {
   position: fixed;
-  top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin: $host-margin;
   padding: 16px;
   height: 5rem;
@@ -17,6 +17,11 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 100;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1246px;
+    margin-inline: auto;
+  }
 }
 
 .nav-items {
