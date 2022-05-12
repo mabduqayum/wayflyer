@@ -1,11 +1,6 @@
-$primary-color: #059669;
-$secondary-color: #d1fae5;
-$text-color: #6b7280;
-
-
 @use '@angular/material' as mat;
 
-$my-primary: mat.define-palette(mat.$green-palette, 700);
+$my-primary: mat.define-palette(mat.$green-palette, 800);
 $my-accent: mat.define-palette(mat.$green-palette, A200, A100, A400);
 
 // The "warn" palette is optional and defaults to red if not specified.
@@ -27,4 +22,13 @@ $my-theme: mat.define-light-theme((
 // emit any typography styles.
 @include mat.button-theme($my-theme);
 
+
+// constants
+$primary: map-get($my-primary, 800);
+$secondary: #d1fae5;
+$text-color: #6b7280;
+
+
 // Include the theme mixins for other components you use here.
+
+
