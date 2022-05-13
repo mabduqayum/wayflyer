@@ -6,18 +6,20 @@ import {MainRoutingModule} from "./main-routing.module";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {HeaderComponent} from "../../components/header/header.component";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     MainComponent,
     HeaderComponent,
   ],
-  imports: [
-    CommonModule,
-    MainRoutingModule,
-    MatIconModule,
-    MatButtonModule,
-  ],
+    imports: [
+        CommonModule,
+        MainRoutingModule,
+        MatIconModule,
+        MatButtonModule,
+        MatCardModule,
+    ],
 })
 export class MainModule {
 }
