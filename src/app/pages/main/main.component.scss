@@ -222,7 +222,7 @@
       position: relative;
       width: min(100%, 384px);
       padding: 1.5rem;
-      background-color: var(--secondary-bg-color);
+      background-color: var(--secondary-bg);
       border-radius: .5rem;
 
       > mat-icon {
@@ -234,7 +234,7 @@
         align-items: center;
         justify-content: center;
         padding: 1.5rem;
-        background-color: var(--primary-bg-color);
+        background-color: var(--primary-bg);
         color: white;
         border-radius: .5rem;
       }
@@ -262,17 +262,65 @@
 }
 
 .co-founder-description {
-  margin-top: 4rem;
   display: flex;
-  background-color: #1f2937 ;
+  column-gap: 2rem;
+  justify-content: center;
+  margin-top: 8rem;
+  background-color: #1f2937;
   color: white;
+  height: 300px;
   width: 100vw;
+  font-weight: 500;
 
-  .title {
+  > img {
+    position: relative;
+    top: -80px;
+    width: 384px;
+    height: 464px;
+    border-radius: 12px;
   }
 
   .description {
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    max-width: 828px;
+
+    blockquote {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .co-founder-name {
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+      line-height: 2rem;
+    }
   }
+}
+
+.wayflyer-description {
+  margin-top: 12rem;
+
+  h1, p {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+  }
+}
+
+.our-platforms {
+  margin-top: 4rem;
 }

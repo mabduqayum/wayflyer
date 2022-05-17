@@ -36,3 +36,12 @@ a, a:hover, a:focus, a:active {
   color: inherit;
 }
 
+blockquote {
+  &:before {
+    content: '\201C';
+  }
+
+  &:after {
+    content: '\201D';
+  }
+}
