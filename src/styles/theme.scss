@@ -25,4 +25,5 @@ $my-theme: mat.define-light-theme((
 
 // Include the theme mixins for other components you use here.
 
-
+// Override the typography in the core CSS.
+//@include mat.core($custom-typography);
