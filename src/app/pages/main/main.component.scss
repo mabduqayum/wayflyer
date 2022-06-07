@@ -172,6 +172,8 @@
     display: flex;
     column-gap: 2rem;
     margin-top: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   div {
@@ -304,23 +306,43 @@
 }
 
 .wayflyer-description {
-  margin-top: 12rem;
+  margin-top: 16rem;
+  text-align: center;
 
-  h1, p {
-    text-align: center;
-  }
 
   h1 {
-    font-size: 3rem;
-    line-height: 3rem;
+    margin-bottom: 0;
   }
 
-  p {
-    font-size: 1.5rem;
+  h2 {
     color: var(--secondary-text);
   }
 }
 
 .our-platforms {
   margin-top: 4rem;
+  display: flex;
+
+  .paragraphs {
+
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    h1 + h2 {
+      color: var(--secondary-text);
+      margin-bottom: 2rem;
+    }
+
+    h2  {
+      margin-bottom: .5rem;
+    }
+
+    h3 {
+      color: var(--secondary-text);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+  }
 }
