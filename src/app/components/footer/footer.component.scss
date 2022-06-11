@@ -1,0 +1,101 @@
+:host {
+
+  padding: 2rem;
+  max-width: 1246px;
+  color: #fff;
+}
+
+$header-color: #9ca3af;
+
+.services {
+  display: flex;
+  justify-content: center;
+  column-gap: 5rem;
+
+  .col {
+    display: flex;
+    flex-direction: column;
+
+    h3:first-child {
+      color: $header-color;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .lang-option {
+    mat-form-field {
+      div {
+        border: none;
+        padding: 0;
+      }
+
+      mat-label {
+        color: $header-color;
+      }
+    }
+  }
+}
+
+
+.subscriptions {
+  margin-top: 2rem;
+  border-top: 1px solid $header-color;
+  padding: 1rem;
+
+  > div {
+    display: flex;
+    column-gap: 2rem;
+
+    .paragraph {
+      max-width: 600px;
+
+      h3:first-child {
+        color: $header-color;
+      }
+    }
+
+    .form-field {
+      mat-form-field {
+        mat-label {
+          color: $header-color;
+        }
+      }
+    }
+
+    button {
+      margin-left: .5rem;
+    }
+
+    h3 {
+      a {
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
+
+
+.copyrights {
+  color: $header-color;
+  padding: 1rem;
+  display: flex;
+  column-gap: .5rem;
+
+  h3 {
+    margin: 0;
+    flex: 1;
+  }
+
+  img {
+    width: 24px;
+    aspect-ratio: 1;
+  }
+}
+
+.wayflyer-footer-icon {
+  display: flex;
+  justify-content: center;
+}

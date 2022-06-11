@@ -29,4 +29,8 @@ header {
 .info-items {
   display: flex;
   column-gap: 4px;
+
+  .info-item {
+    font-weight: 500;
+  }
 }

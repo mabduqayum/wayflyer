@@ -7,19 +7,27 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {HeaderComponent} from "../../components/header/header.component";
 import {MatCardModule} from "@angular/material/card";
+import {FooterComponent} from "../../components/footer/footer.component";
+import {MatSelectModule} from "@angular/material/select";
+import {FormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
     MainComponent,
     HeaderComponent,
+    FooterComponent
   ],
-    imports: [
-        CommonModule,
-        MainRoutingModule,
-        MatIconModule,
-        MatButtonModule,
-        MatCardModule,
-    ],
+  imports: [
+    CommonModule,
+    MainRoutingModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatSelectModule,
+    FormsModule,
+    MatInputModule,
+  ],
 })
 export class MainModule {
 }

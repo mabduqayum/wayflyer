@@ -1,0 +1,89 @@
+<section class="services">
+  <div class="col">
+    <h3>SOLUTIONS</h3>
+    <h3>Funding</h3>
+  </div>
+
+  <div class="col">
+    <h3>COMPANY</h3>
+    <h3>About</h3>
+    <h3>Careers</h3>
+    <h3>Our customers</h3>
+    <h3>Press</h3>
+    <h3>Blog</h3>
+  </div>
+
+  <div class="col">
+    <h3>RESOURCES</h3>
+    <h3>Help center</h3>
+    <h3>Privacy Notice</h3>
+    <h3>Cookie Notice</h3>
+    <h3>Terms</h3>
+    <h3>Partner program</h3>
+    <h3>Referral program</h3>
+  </div>
+
+  <div class="col">
+    <h3>OFFICES</h3>
+    <h3>Dublin</h3>
+    <h3>London</h3>
+    <h3>New York</h3>
+    <h3>Sydney</h3>
+    <h3>Atlanta</h3>
+  </div>
+
+  <div class="lang-option col">
+    <mat-form-field>
+      <mat-label>LANGUAGE</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="food">
+        <mat-option *ngFor="let food of [1, 2, 3]" [value]="food">
+          {{food}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</section>
+
+<section class="subscriptions">
+  <div>
+    <div class="paragraph">
+      <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+      <h3>Get expert advice on managing inventory,
+        marketing and finance to grow your business. The more you know,
+        the faster you grow.
+      </h3>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text" [(ngModel)]="value">
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <button type="submit" mat-flat-button color="primary">Subscribe</button>
+      <h3>We care about the protection of your data. Read our
+        <a routerLink="">Privacy Notice.</a>
+      </h3>
+    </div>
+  </div>
+</section>
+
+
+<section class="copyrights">
+  <h3>© Copyright 2022 Wayflyer. All rights reserved.</h3>
+  <img src="https://assets-global.website-files.com/61323681dfd4c23ae4a443e3/61323681dfd4c2ab74a4470b_linkediin.svg"
+       alt="">
+  <img src="https://assets-global.website-files.com/61323681dfd4c23ae4a443e3/61323681dfd4c224c8a446bc_Social%20link.svg"
+       alt="">
+</section>
+
+<section class="wayflyer-footer-icon">
+  <a routerLink="">
+    <img src="assets/wayflyer-white.svg" alt="">
+  </a>
+</section>
+
+
+

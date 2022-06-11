@@ -21,7 +21,9 @@ $my-theme: mat.define-light-theme((
 // Emit styles for MatButton based on `$my-theme`. Because the configuration
 // passed to `define-light-theme` omits typography, `button-theme` will not
 // emit any typography styles.
-@include mat.button-theme($my-theme);
+@include mat.all-component-themes($my-theme);
+//@include mat.button-theme($my-theme);
+//@include mat.input-theme($my-theme);
 
 
 // Include the theme mixins for other components you use here.

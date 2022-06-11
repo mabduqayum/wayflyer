@@ -145,7 +145,6 @@
   }
 }
 
-
 .customers {
   margin-top: 2rem;
   display: flex;
@@ -157,7 +156,6 @@
     height: 30px;
   }
 }
-
 
 .global-ecommerce {
   margin-top: 4rem;
@@ -271,7 +269,7 @@
   background-color: #1f2937;
   color: white;
   height: 300px;
-  width: calc(100vw - 17px);
+  width: var(--max-width);
   font-weight: 500;
 
   > img {
@@ -360,7 +358,6 @@
   }
 }
 
-
 .geology {
   margin-top: 4rem;
   text-align: center;
@@ -428,6 +425,7 @@
     .collection {
       width: 414px;
       border-radius: 8px;
+      overflow: hidden;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
       0px 4px 6px 4px rgba(0, 0, 0, 0.05);
 
@@ -462,4 +460,53 @@
 
     }
   }
+}
+
+.join-out-team {
+  margin-top: 8rem;
+  display: flex;
+  column-gap: 2rem;
+  background-color: var(--grey-blue);
+  border-bottom: 1px var(--secondary-text);
+  width: var(--max-width);
+
+  img {
+    height: 452px;
+  }
+
+  .paragraph {
+    color: #fff;
+    margin-block: auto;
+    h3 {
+      font-weight: 600;
+      margin-block: 3rem 0;
+    }
+
+    h1 {
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      color: var(--on-grey-blue);
+    }
+
+    button {
+      padding-block: .9rem;
+      font-size: 1rem;
+      line-height: 1;
+      color: var(--grey-blue);
+      font-weight: 500;
+      margin: 1rem 0;
+    }
+  }
+}
+
+
+footer {
+  background-color: var(--grey-blue);
+  width: var(--max-width);
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--on-grey-blue);
 }

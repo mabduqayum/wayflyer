@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port=7294 --open",
-    "start-host": "ng serve --port=7294 --open --host=192.168.1.13",
+    "start": "ng serve --port=7294",
+    "start-host": "ng serve --port=7294 --host=192.168.1.13",
     "build": "ng build --configuration=production",
     "gh-build": "ng build --configuration=production --output-path=docs --base-href=https://mabduqayum.github.io/wayflyer/",
     "watch": "ng build --watch --configuration development",
