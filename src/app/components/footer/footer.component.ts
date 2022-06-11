@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   selectedValue: string | undefined;
-  value= 'Enter your email';
+  value: string | undefined;
 
   constructor() { }
 
