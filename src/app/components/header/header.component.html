@@ -10,6 +10,7 @@
   >{{isMenuOpened ? 'close' : 'menu'}}</mat-icon>
 
   <ng-container *ngIf="isMenuOpened || !isSmall">
+    <hr *ngIf="isSmall" class="divider">
     <nav class="nav-items">
       <button mat-button class="nav-item">
         Funding
@@ -42,13 +43,16 @@
       <h3 *ngIf="isSmall">Existing customer? <a routerLink="logIn">Log in</a></h3>
       <button *ngIf="!isSmall"
               mat-stroked-button
-              class="info-item">Log In</button>
+              class="info-item">Log In
+      </button>
       <button *ngIf="isSmall"
               mat-stroked-button
-              class="info-item">Book a call</button>
+              class="info-item">Book a call
+      </button>
       <button mat-flat-button
               color="primary"
-              class="info-item">Get funded</button>
+              class="info-item">Get funded
+      </button>
     </div>
   </ng-container>
 </header>

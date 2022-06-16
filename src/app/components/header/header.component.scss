@@ -51,18 +51,14 @@ header {
 @media screen and (max-width: 992px) {
   header {
     height: auto;
+    justify-content: center;
     flex-wrap: wrap;
 
     .logo {
       flex-basis: calc(100% - 2rem);
-
-      &:after {
-        margin-block: .5rem;
-        border-bottom: 1px var(--secondary-text);
-      }
     }
 
-    mat-icon {
+    > mat-icon {
       $icon-size: 2rem;
       cursor: pointer;
       width: $icon-size;
@@ -70,24 +66,31 @@ header {
       font-size: $icon-size;
       color: var(--secondary-text);
     }
-  }
 
-  .nav-items {
-    flex-direction: column;
-    flex-basis: 25%;
-    align-items: flex-start;
-  }
+    hr {
+      margin-inline: -1rem;
+      width: calc(100% + 2rem);
+    }
 
-  .info-items {
-    flex-direction: column-reverse;
-    flex-basis: 50%;
+    .nav-items {
+      flex-direction: column;
+      flex-basis: 25%;
+      align-items: flex-start;
+      margin-top: -1rem;
+    }
 
-    h3 {
-      padding-top: .5rem;
-      text-align: center;
+    .info-items {
+      margin-top: .5rem;
+      flex-direction: column-reverse;
+      flex-basis: 50%;
 
-      a {
-        color: var(--primary);
+      h3 {
+        padding-top: .5rem;
+        text-align: center;
+
+        a {
+          color: var(--primary);
+        }
       }
     }
   }
