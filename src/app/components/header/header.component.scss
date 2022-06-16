@@ -1,36 +1,109 @@
 $host-margin: 8px;
-header {
+:host {
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  z-index: 100;
   margin: $host-margin;
-  padding: 16px;
-  height: 5rem;
   width: calc(100% - 2 * #{$host-margin});
-  border-radius: 8px;
+  height: auto;
+  display: flex;
   background-color: white;
+  border-radius: 8px;
   box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 6%);
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  padding: 16px;
   color: var(--secondary-text);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 100;
+  transition: all step-end .3s;
 
-  @media screen and (min-width: 1200px) {
-    max-width: 1246px;
-    margin-inline: auto;
+  .nav-items {
+    display: flex;
+
+    button {
+      text-rendering: geometricPrecision;
+      font-size: clamp(1rem, 1vw + .5rem, 1.3rem);
+    }
+  }
+
+  .info-items {
+    display: flex;
+    row-gap: .5rem;
+    column-gap: 4px;
+
+    .info-item {
+      font-weight: 500;
+      font-size: 1rem;
+    }
   }
 }
 
-.nav-items {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  :host {
+    max-width: 1246px;
+  }
 }
 
-.info-items {
-  display: flex;
-  column-gap: 4px;
+@media screen and (max-width: 992px) {
+  header {
+    height: auto;
+    flex-wrap: wrap;
 
-  .info-item {
-    font-weight: 500;
+    .logo {
+      flex-basis: calc(100% - 2rem);
+
+      &:after {
+        margin-block: .5rem;
+        border-bottom: 1px var(--secondary-text);
+      }
+    }
+
+    mat-icon {
+      $icon-size: 2rem;
+      cursor: pointer;
+      width: $icon-size;
+      height: $icon-size;
+      font-size: $icon-size;
+      color: var(--secondary-text);
+    }
+  }
+
+  .nav-items {
+    flex-direction: column;
+    flex-basis: 25%;
+    align-items: flex-start;
+  }
+
+  .info-items {
+    flex-direction: column-reverse;
+    flex-basis: 50%;
+
+    h3 {
+      padding-top: .5rem;
+      text-align: center;
+
+      a {
+        color: var(--primary);
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  header {
+
+    .nav-items {
+      flex-basis: 50%;
+      margin-block: 1rem;
+    }
+
+    .info-items {
+      flex-basis: 100%;
+    }
   }
 }
