@@ -1,26 +1,54 @@
 <header>
-  <a routerLink="" class="logo">
-    <img src="assets/wayflyer.svg" alt="">
-  </a>
-
-  <nav class="nav-items">
-    <button mat-button class="nav-item">
-      Funding
-      <mat-icon>expand_more</mat-icon>
-    </button>
-    <button mat-button class="menu-item">
-      Our customers
-    </button>
-    <button mat-button class="menu-item">
-      Company
-      <mat-icon>expand_more</mat-icon>
-    </button>
+  <nav class="logo">
+    <a routerLink="">
+      <img src="assets/wayflyer.svg" alt="">
+    </a>
   </nav>
 
-  <div class="info-items">
-    <button mat-button class="info-item">Log In</button>
-    <button mat-flat-button
-            color="primary"
-            class="info-item">Get funded</button>
-  </div>
+  <mat-icon *ngIf="isSmall"
+            (click)="onMenuClick()"
+  >{{isMenuOpened ? 'close' : 'menu'}}</mat-icon>
+
+  <ng-container *ngIf="isMenuOpened || !isSmall">
+    <nav class="nav-items">
+      <button mat-button class="nav-item">
+        Funding
+        <mat-icon>expand_more</mat-icon>
+      </button>
+      <button mat-button class="menu-item">
+        Our customers
+      </button>
+      <button mat-button class="menu-item">
+        Company
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </nav>
+
+    <nav *ngIf="isSmall" class="nav-items">
+      <button mat-button class="nav-item">
+        About us
+        <mat-icon>expand_more</mat-icon>
+      </button>
+      <button mat-button class="menu-item">
+        Careers
+      </button>
+      <button mat-button class="menu-item">
+        Press Room
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </nav>
+
+    <div class="info-items">
+      <h3 *ngIf="isSmall">Existing customer? <a routerLink="logIn">Log in</a></h3>
+      <button *ngIf="!isSmall"
+              mat-stroked-button
+              class="info-item">Log In</button>
+      <button *ngIf="isSmall"
+              mat-stroked-button
+              class="info-item">Book a call</button>
+      <button mat-flat-button
+              color="primary"
+              class="info-item">Get funded</button>
+    </div>
+  </ng-container>
 </header>
