@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,8 @@ export class HeaderComponent implements OnInit {
   isMenuOpened = false;
   isSmall = false;
 
-  constructor() { }
+  constructor(private elementRef: ElementRef) {
+  }
 
   ngOnInit(): void {
     this.onResize();
@@ -19,7 +20,17 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.deviceWidth = window.innerWidth;
-    this.isSmall = window.innerWidth <= 992;
+    this.isSmall = this.deviceWidth <= 992;
+    if (!this.isSmall) {
+      this.isMenuOpened = false;
+    }
+  }
+
+  @HostListener('window:click', ['$event'])
+  onOutsideClick(event: MouseEvent | TouchEvent) {
+    if (!this.elementRef.nativeElement.contains(event.target)) {
+      this.isMenuOpened = false
+    }
   }
 
   onMenuClick() {
