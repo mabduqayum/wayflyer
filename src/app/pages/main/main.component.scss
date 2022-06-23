@@ -618,16 +618,21 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  .contact-buttons {
-    flex-direction: column;
+  .mp-intro {
+    .contact-buttons {
+      padding-inline: 2rem;
+      width: 100%;
+      flex-direction: column;
+    }
   }
 
   .geology {
-    > .divider {
-      display: none;
-    }
     > div {
       flex-direction: column;
+
+      > .divider {
+        display: none;
+      }
     }
   }
 }
