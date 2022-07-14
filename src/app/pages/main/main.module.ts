@@ -11,12 +11,14 @@ import {FooterComponent} from "../../components/footer/footer.component";
 import {MatSelectModule} from "@angular/material/select";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import { CollectionComponent } from './collection/collection.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CollectionComponent,
   ],
   imports: [
     CommonModule,
