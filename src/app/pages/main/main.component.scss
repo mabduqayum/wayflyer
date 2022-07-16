@@ -279,7 +279,7 @@
   background-color: #1f2937;
   color: white;
   height: 300px;
-  width: var(--max-width);
+  width: 100vw;
   font-weight: 500;
 
   > img {
@@ -446,13 +446,13 @@
   }
 }
 
-.join-out-team {
+.join-our-team {
   margin-top: 8rem;
   display: flex;
   column-gap: 2rem;
   background-color: var(--grey-blue);
   border-bottom: 1px var(--secondary-text);
-  width: var(--max-width);
+  width: 100vw;
 
   img {
     height: 452px;
@@ -489,7 +489,7 @@
 
 footer {
   background-color: var(--grey-blue);
-  width: var(--max-width);
+  width: 100vw;
   display: flex;
   justify-content: center;
   border-top: 1px solid var(--on-grey-blue);
