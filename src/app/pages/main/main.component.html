@@ -226,3 +226,13 @@
 <footer>
   <app-footer></app-footer>
 </footer>
+
+<!--<nav-to-top></nav-to-top>-->
+
+<button *ngIf="showFAB"
+        class="floating-action-button"
+        (click)="scrollToTop()"
+        mat-fab
+        color="primary">
+  <mat-icon>arrow_upward</mat-icon>
+</button>
