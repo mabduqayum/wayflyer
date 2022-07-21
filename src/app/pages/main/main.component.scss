@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+section {
+  max-width: 1200px;
+}
+
 @mixin green-link {
   display: flex;
   align-items: center;
@@ -35,7 +39,6 @@
   .mp-call-out {
     @include green-link;
     margin: 1rem;
-    width: fit-content;
     padding: 4px 8px;
     background-color: var(--secondary);
     border-radius: 14px;
@@ -152,9 +155,9 @@
 .customers {
   margin-top: 2rem;
   padding-inline: 1rem;
+  width: min(100%, 1024px);
   display: flex;
   justify-content: space-between;
-  width: 100%;
 
   img {
     width: 116px;
@@ -279,7 +282,8 @@
   background-color: #1f2937;
   color: white;
   height: 300px;
-  width: 100vw;
+  width: 100%;
+  max-width: none;
   font-weight: 500;
 
   > img {
@@ -421,8 +425,7 @@
 }
 
 .latest-updates {
-  margin-top: 8rem;
-  margin-inline: clamp(-8rem, 1200px - 100vw, 1rem);
+  margin: 1rem;
 
   > h1,
   > h2 {
@@ -449,18 +452,23 @@
 .join-our-team {
   margin-top: 8rem;
   display: flex;
+  justify-content: center;
   column-gap: 2rem;
   background-color: var(--grey-blue);
   border-bottom: 1px var(--secondary-text);
-  width: 100vw;
+  width: 100%;
+  max-width: none;
 
   img {
     height: 452px;
+    object-fit: cover;
+    max-width: 50%;
   }
 
   .paragraph {
     color: #fff;
     margin-block: auto;
+    max-width: 50%;
 
     h3 {
       font-weight: 600;
@@ -489,7 +497,7 @@
 
 footer {
   background-color: var(--grey-blue);
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   border-top: 1px solid var(--on-grey-blue);
@@ -510,13 +518,6 @@ footer {
   }
   to {
     opacity: 1;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  :host {
-    max-width: 1024px;
-    margin-inline: auto;
   }
 }
 
