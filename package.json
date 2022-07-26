@@ -6,7 +6,7 @@
     "start": "ng serve --port=7294 -o",
     "start-host": "ng serve --port=7294 --host=192.168.1.13",
     "build": "ng build --configuration=production",
-    "gh-build": "ng build --configuration=production --output-path=docs --base-href=https://mabduqayum.github.io/wayflyer/",
+    "gh-build": "ng build --configuration=production --base-href=/wayflyer/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
