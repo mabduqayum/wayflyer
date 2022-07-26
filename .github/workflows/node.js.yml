@@ -29,6 +29,6 @@ jobs:
       - run: |
           npm i
           npm run gh-build --if-present
-      with:
-        target_branch: gh-pages
+        with:
+          target_branch: gh-pages
 
