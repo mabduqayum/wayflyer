@@ -25,13 +25,13 @@ jobs:
           cache: 'npm'
 
       - name: install dependencies
-      - run: npm i
+        run: npm i
 
       - name: build gh-pages
-      - run: npm run gh-build
+        run: npm run gh-build
 
       - name: Deploy
-      - uses: mAbduqayum/github-pages-deploy-action@v4
+        uses: mAbduqayum/github-pages-deploy-action@v4
         with:
           branch: gh-page
           folder: dist
