@@ -31,9 +31,4 @@ jobs:
         run: npm run gh-build
 
       - name: Deploy
-        uses: mAbduqayum/github-pages-deploy-action@v4
-        with:
-          branch: gh-page
-          folder: dist
-          clean: false
-          single-commit: true
+        uses: actions/github-pages-deploy-action@v4
