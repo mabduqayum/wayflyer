@@ -30,8 +30,6 @@ jobs:
       - name: build gh-pages
       - run: npm run gh-build
 
-  deploy:
-    steps:
       - name: Deploy
       - uses: mAbduqayum/github-pages-deploy-action@v4
         with:
