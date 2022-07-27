@@ -35,4 +35,4 @@ jobs:
         with:
           branch: gh-page # by default
           ssh-key: ${{ secrets.DEPLOY_KEY_SECRET }}
-          folder: dist
+          folder: dist/wayflyer
