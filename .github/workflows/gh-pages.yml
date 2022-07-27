@@ -33,5 +33,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.deploy_key_secret }}
+          # branch: gh-pages # by default
+          ssh-key: ${{ secrets.deploy_key_secret }}
           folder: dist
