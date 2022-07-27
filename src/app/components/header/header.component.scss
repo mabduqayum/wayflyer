@@ -1,24 +1,19 @@
 $host-margin: 8px;
+
 :host {
   position: fixed;
   z-index: 100;
   margin: $host-margin;
   width: calc(100% - 2 * #{$host-margin});
-  height: auto;
-  display: flex;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 6%);
-}
-
-header {
-  width: 100%;
   height: 5rem;
-  padding: 16px;
-  color: var(--secondary-text);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 6%);
+  padding: 16px;
+  color: var(--secondary-text);
   transition: all step-end .3s;
 
   .nav-items {
@@ -42,6 +37,7 @@ header {
   }
 }
 
+
 @media screen and (min-width: 1200px) {
   :host {
     max-width: 1246px;
@@ -49,7 +45,7 @@ header {
 }
 
 @media screen and (max-width: 992px) {
-  header {
+  :host {
     height: auto;
     justify-content: center;
     flex-wrap: wrap;
@@ -95,12 +91,10 @@ header {
       }
     }
   }
-
 }
 
 @media screen and (max-width: 768px) {
-  header {
-
+  :host {
     .nav-items {
       flex-basis: 50%;
       margin-block: 1rem;
