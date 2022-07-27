@@ -31,4 +31,8 @@ jobs:
         run: npm run gh-build
 
       - name: Deploy
-        uses: actions/github-pages-deploy-action@v4
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/angular-github-actions
