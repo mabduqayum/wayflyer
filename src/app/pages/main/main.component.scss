@@ -467,7 +467,7 @@ section {
 
   .paragraph {
     color: #fff;
-    margin-block: auto;
+    margin: 1rem;
     max-width: 50%;
 
     h3 {
@@ -493,14 +493,6 @@ section {
       margin: 1rem 0;
     }
   }
-}
-
-footer {
-  background-color: var(--grey-blue);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid var(--on-grey-blue);
 }
 
 .floating-action-button {

@@ -1,26 +1,47 @@
+$header-color: #9ca3af;
+$max-width: 1246px;
+
 :host {
-  padding: 2rem;
-  max-width: 1246px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  //max-width: 100%;
   color: #fff;
+  background-color: var(--grey-blue);
+  border-top: 1px solid var(--secondary-text);
 }
 
-$header-color: #9ca3af;
+section {
+  max-width: $max-width;
+  padding-inline: 1rem;
+}
+
+hr {
+  max-width: $max-width;
+}
 
 .services {
+  width: 100%;
   display: flex;
   justify-content: center;
-  column-gap: 5rem;
+  //column-gap: 5rem;
 
   .col {
     display: flex;
     flex-direction: column;
+    flex-basis: 20%;
+    flex-grow: 0;
 
     h3:first-child {
       color: $header-color;
+      font-weight: 500;
     }
 
     h3 {
-      margin-bottom: 1rem;
+      margin-bottom: 0;
+      line-height: 2.5;
     }
   }
 
@@ -38,49 +59,52 @@ $header-color: #9ca3af;
   }
 }
 
-
 .subscriptions {
+  display: flex;
+  column-gap: 2rem;
   margin-top: 2rem;
-  border-top: 1px solid $header-color;
   padding: 1rem;
 
-  > div {
-    display: flex;
-    column-gap: 2rem;
+  .paragraph {
+    max-width: 600px;
 
-    .paragraph {
-      max-width: 600px;
+    h3:first-child {
+      color: $header-color;
+    }
+  }
 
-      h3:first-child {
+  .form-field {
+    mat-form-field {
+      width: 300px;
+
+      mat-label {
         color: $header-color;
       }
-    }
 
-    .form-field {
-      mat-form-field {
-        mat-label {
-          color: $header-color;
-        }
-      }
     }
 
     button {
-      margin-left: .5rem;
+      margin-left: 1rem;
+      line-height: 2.3;
     }
 
     h3 {
+      font-size: 14px;
+      margin-top: 1rem;
+
       a {
         text-decoration-line: underline;
       }
     }
   }
-}
 
+}
 
 .copyrights {
   color: $header-color;
   padding: 1rem;
   display: flex;
+  align-items: flex-end;
   column-gap: .5rem;
 
   h3 {
@@ -97,4 +121,40 @@ $header-color: #9ca3af;
 .wayflyer-footer-icon {
   display: flex;
   justify-content: center;
+}
+
+
+@media (max-width: 992px) {
+  .services {
+    flex-wrap: wrap;
+
+    .col {
+      flex-basis: 25%;
+    }
+
+    .lang-option {
+      flex-basis: 100%;
+    }
+  }
+
+  .subscriptions {
+    flex-direction: column;
+
+    .paragraph,
+    .form-field {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    .col:not(.lang-option) {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+
 }

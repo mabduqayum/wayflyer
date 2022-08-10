@@ -8,8 +8,14 @@ import {Component, OnInit} from '@angular/core';
 export class FooterComponent implements OnInit {
   selectedValue: string | undefined;
   value: string | undefined;
+  languages: string[];
 
   constructor() {
+    this.languages = [
+      'English',
+      'Russian',
+      'German'
+    ]
   }
 
   ngOnInit(): void {

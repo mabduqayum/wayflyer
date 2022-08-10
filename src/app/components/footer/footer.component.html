@@ -2,6 +2,7 @@
   <div class="col">
     <h3>SOLUTIONS</h3>
     <h3>Funding</h3>
+    <h3>Scaling</h3>
   </div>
 
   <div class="col">
@@ -36,40 +37,39 @@
     <mat-form-field>
       <mat-label>LANGUAGE</mat-label>
       <mat-select [(ngModel)]="selectedValue" name="food">
-        <mat-option *ngFor="let food of [1, 2, 3]" [value]="food">
-          {{food}}
+        <mat-option *ngFor="let language of languages" [value]="language">
+          {{language}}
         </mat-option>
       </mat-select>
     </mat-form-field>
   </div>
 </section>
 
-<section class="subscriptions">
-  <div>
-    <div class="paragraph">
-      <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
-      <h3>Get expert advice on managing inventory,
-        marketing and finance to grow your business. The more you know,
-        the faster you grow.
-      </h3>
-    </div>
+<hr class="divider">
 
-    <div class="form-field">
-      <mat-form-field class="example-form-field" appearance="fill">
-        <mat-label>Enter your email</mat-label>
-        <input matInput type="text" [(ngModel)]="value">
-        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-      <button type="submit" mat-flat-button color="primary">Subscribe</button>
-      <h3>We care about the protection of your data. Read our
-        <a routerLink="">Privacy Notice.</a>
-      </h3>
-    </div>
+<section class="subscriptions">
+  <div class="paragraph">
+    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+    <h3>Get expert advice on managing inventory,
+      marketing and finance to grow your business. The more you know,
+      the faster you grow.
+    </h3>
+  </div>
+
+  <div class="form-field">
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput type="text" [(ngModel)]="value">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <button type="submit" mat-flat-button color="primary">Subscribe</button>
+    <h3>We care about the protection of your data. Read our
+      <a routerLink="">Privacy Notice.</a>
+    </h3>
   </div>
 </section>
-
 
 <section class="copyrights">
   <h3>© Copyright 2022 Wayflyer. All rights reserved.</h3>
